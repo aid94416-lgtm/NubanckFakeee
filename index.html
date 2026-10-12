@@ -1,0 +1,19 @@
+<!-- Importar o Firebase App e o Firebase Messaging -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging.js";
+
+  // A sua configuração do Firebase fornecida pelo site
+  const firebaseConfig = {
+    apiKey: "SUA_API_KEY",
+    authDomain: "seu-projeto.firebaseapp.com",
+    projectId: "seu-projeto",
+    storageBucket: "seu-projeto.appspot.com",
+    messagingSenderId: "SEU_SENDER_ID",
+    appId: "SEU_APP_ID"
+  };
+
+  // Inicializar o Firebase
+  const app = initializeApp(firebaseConfig);
+  const messaging = getMessaging(app);
+</script>
